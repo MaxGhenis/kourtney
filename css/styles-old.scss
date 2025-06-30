@@ -1,0 +1,491 @@
+---
+---
+{% assign profile = site.design.profile %}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 2rem;
+  margin-bottom: 0px;
+ }
+
+/*
+ * Link Colours
+ */
+html {
+    color: -internal-root-color;
+}
+
+/*
+ * Navigation
+ */
+.navbar {
+  width: 100%;
+  font-size: 1.8rem;
+  font-family: Verdana;
+  font-weight: bolder;
+  min-height: 4rem;
+  padding: 0.75em;
+  position: relative;
+}
+.navbar ul {
+  overflow: hidden;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  float: right;
+}
+.navbar li {
+  display: inline;
+}
+.navbar li a {
+  text-align: center;
+  padding: 1rem 1.5rem 0rem 1.5rem;
+  float: left;
+  color: black;
+  transition: 1000ms;
+  border-bottom: 5px solid transparent;
+  font-size: 1.8rem;
+  text-decoration: none;
+}
+.navbar li a:hover {
+  border-color: grey;
+  color: grey;
+}
+
+/* Mobile Navigation */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  float: right;
+  padding: 1rem;
+}
+
+@media (max-width: 750px) {
+  .navbar {
+    font-size: 1.4rem;
+    padding: 0.5em;
+  }
+  
+  .mobile-menu-toggle {
+    display: block;
+  }
+  
+  .navbar ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1000;
+    float: none;
+  }
+  
+  .navbar ul.show {
+    display: block;
+  }
+  
+  .navbar li {
+    display: block;
+    width: 100%;
+  }
+  
+  .navbar li a {
+    display: block;
+    padding: 1rem;
+    float: none;
+    font-size: 1.6rem;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+  }
+  
+  .navbar li:last-child a {
+    border-bottom: none;
+  }
+}
+
+.navhome ul{
+  overflow: hidden;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  float: left;
+  text-align: left;
+}
+
+.navhome li a {
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 2.8rem;
+}
+
+@media (max-width: 750px) {
+  .navhome li a {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navhome li a {
+    font-size: 1.8rem;
+  }
+}
+
+.navhome li a:hover {
+
+}
+
+a:link {
+  text-decoration: underline;
+  color: RoyalBlue;
+}
+a:visited {
+  color: RoyalBlue;
+}
+a:hover {
+  font-weight: bold;
+  text-decoration: underline;
+  color: RoyalBlue;;
+}
+.item {
+}
+.item:link {
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+.item:visited {
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+.item:hover {
+  text-decoration: underline;
+  color: RoyalBlue;
+}
+
+.document {
+}
+.document:link {
+  text-decoration: none;
+  font-weight: normal;
+  color: black;
+}
+.document:visited {
+  text-decoration: none;
+  font-weight: normal;
+  color: black;
+}
+.document:hover {
+  text-decoration: underline;
+  font-weight: normal;
+  color: RoyalBlue;
+}
+
+.breadcrumb {
+}
+.breadcrumb:link {
+  text-decoration: none;
+  font-weight: normal;
+}
+.breadcrumb:visited {
+  text-decoration: none;
+  font-weight: normal;
+}
+.breadcrumb:hover {
+  text-decoration: none;
+  font-weight: bold;
+  color: RoyalBlue;
+}
+/* Header / Footer */
+.headtext {
+  position: absolute;
+  top: 20%;
+  left: 0%;
+  color: white;
+  font-weight: bolder;
+  font-size: 3.7em;
+  text-shadow: 2px 2px black;
+  transform: translate(0%, 100%);
+}
+
+@media (max-width: 750px) {
+  .headtext {
+    font-size: 2.5em;
+    left: 5%;
+    right: 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .headtext {
+    font-size: 2em;
+    left: 5%;
+    right: 5%;
+  }
+}
+
+.headcaption {
+  bottom: 0%;
+  right: 0%;
+  color: white;
+  font-size: 1.5rem;
+  position: absolute;
+  opacity: 0.6;
+  border-radius: 3px;
+  background-color: black;
+  color: white;
+  padding: 5px 10px 5px 10px;
+}
+
+header {
+padding-top: 20px;
+}
+
+.headpic {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 220px;
+  display: block;
+  backface-visibility: hidden;
+  position: relative;
+}
+
+@media (max-width: 750px) {
+  .headpic {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .headpic {
+    height: 150px;
+  }
+}
+
+#breadcrumbs{
+  padding-top: 20px;
+  padding-left: 0;
+}
+
+.footer{
+  text-align: left;
+  color: grey;
+  padding-bottom: 10px;
+  padding-top: 100px;
+  width: 100%;
+  margin-top: auto;
+}
+.hidden {
+    display: none !important;
+}
+/*
+ * Profile Card
+ */
+
+ .home{
+   margin-top: 4.5rem;
+ }
+ .publication{
+   margin-top: 2rem;
+ }
+ 
+ @media (max-width: 750px) {
+   .home {
+     margin-top: 2rem;
+     padding: 0 1rem;
+   }
+   .publication {
+     margin-top: 1rem;
+     padding: 0 1rem;
+   }
+ }
+ .email {
+   color: red;
+ }
+.card {
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
+  /*max-width: 300px;*/
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  margin-top: 30px;
+}
+
+@media (max-width: 750px) {
+  .card {
+    margin: 20px 10px;
+  }
+}
+.title {
+  color: black;
+}
+.card a {
+  text-decoration: none;
+  font-size: 35px;
+}
+.card a:hover {
+}
+
+a.cv { color: black; }
+a.linkedin { color: black; }
+a.ideas-repec { color: black; }
+a.google-scholar { color: black; }
+a.academia { color: black; }
+a.orcid { color: black; }
+a.researchgate { color: black; }
+a.twitter { color: black; }
+a.cv:hover { color: #F3000F; }
+a.linkedin:hover { color: #0077B5; }
+a.ideas-repec:hover { color: #F3000F; }
+a.google-scholar:hover { color: #4885ed; }
+a.academia:hover { color: #3C3F42; }
+a.orcid:hover { color: #A6CE39; }
+a.researchgate:hover { color: #00D6BD; }
+a.twitter:hover { color: #1DA1F2; }
+/*
+{% for item in site.social %}
+ {% assign icon = item %}
+ {% unless site.profile.iconcolour %}
+  {% for item in site.data.socials %}
+   {% assign social = item %}
+   {% if social.name == icon.name %}
+    a.{{ social.name }}{ color: {{ social.colour }};}{% endif %}
+   {% endfor %}
+  {% else %}
+    a.{{ icon.name }}{ color: {{ site.profile.iconcolour }};}
+ {% endunless %}
+{% endfor %}
+
+{% for item in site.social %}
+ {% assign icon = item %}
+ {% unless site.profile.iconhover %}
+  {% for item in site.data.socials %}
+   {% assign social = item %}
+   {% if social.name == icon.name %}
+    a.{{ social.name }}:hover{ color: {{ social.colour }};}{% endif %}
+   {% endfor %}
+ {% else %}
+    a.{{ icon.name }}:hover{ color: {{ site.profile.iconhover }};}
+ {% endunless %}
+{% endfor %}
+*/
+/*
+* Collapsibles for Abstracts
+*/
+details {
+ padding-top: 0px;
+ padding-bottom: 0px;
+ margin: 0 0 0 0;
+ display: block;
+ cursor: pointer;
+}
+
+
+{% for publication in site.publications %}
+{% if publication.abstract %}
+details summary.{{ publication.shortname }}::-webkit-details-marker {
+   display: none;
+}
+details > summary.{{ publication.shortname }}:first-of-type {
+    list-style-type: none;
+}
+summary.{{ publication.shortname }}:focus{
+   outline: none;
+}
+summary.{{ publication.shortname }}:after {
+  content: "Abstract";
+  float: left;
+  font-size: 1.05em;
+  font-weight: bold;
+  margin: -5px 5px 0 0;
+  padding-top: 4px;
+}
+details[open] summary.{{ publication.shortname }}:after {
+  content: "Abstract";
+  padding-top: 4px;
+}
+{% else %}
+details summary.{{ publication.shortname }}::-webkit-details-marker {
+   display: none;
+}
+details > summary.{{ publication.shortname }}:first-of-type {
+    list-style-type: none;
+}
+summary.{{ publication.shortname }}:focus{
+   outline: none;
+}
+summary.{{ publication.shortname }}:after {
+  content: "";
+  float: left;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: -5px 5px 0 0;
+  padding: 10px;
+}
+details[open] summary.{{ publication.shortname }}:after {
+  content: "";
+}
+{% endif %}
+{% endfor %}
+
+.abstract {
+ animation: sweep .5s ease-in-out;
+ background-color: #f2f2f2;
+}
+/*
+ * Tooltip
+ */
+.tooltip {
+}
+.tooltip button {
+  background-color: #83000C;
+  color: white;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 170px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 3px;
+  position: absolute;
+  z-index: 1;
+  top: 36%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.institution{
+  padding-top: 1em;
+  font-style: italic;
+  display:block
+}
+
+hr {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-width: 0;
+  border-top: 1px solid #E1E1E1; }
+
+@import "skeleton";
